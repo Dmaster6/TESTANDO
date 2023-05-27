@@ -10,10 +10,11 @@ public static void main(String[] args) {
 	Scanner in = new Scanner(System.in);
 	salariousuario = in.nextDouble();
 	double quantsalario = salariousuario/salariominimo;
+	
 	String ajeitada = "#.##";
 	DecimalFormat decimal = new DecimalFormat(ajeitada);
-	
 	String ajeitou = decimal.format(quantsalario);
+	
 	System.out.println("vc possui: " + ajeitou + " salario(s) minimo(s)");
 	
 	

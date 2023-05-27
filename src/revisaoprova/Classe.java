@@ -15,8 +15,8 @@ for(int i= 0; i<10; i++) {
 	String nomes;
 	nomes = in.next();
 	nome.add(nomes);
-	Collections.sort(nome);
 }
+Collections.sort(nome);
 System.out.println(nome);
 
 

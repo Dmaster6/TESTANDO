@@ -1,10 +1,8 @@
 package revisaoprova;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-import questao2.Funcionarios;
 
 public class vetorint {
 public static void main(String[] args) {

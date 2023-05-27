@@ -3,13 +3,13 @@ package qustao3;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import questao2.Funcionarios;
 
 
 public class Metodos3 {
 	
 	ArrayList<Funcionarios> func = new ArrayList<Funcionarios>();
 	int total = 0;
+	
 	 public void cadastrar() {
 	        Scanner input = new Scanner(System.in);
 	        Scanner input1 = new Scanner(System.in);
@@ -28,14 +28,19 @@ public class Metodos3 {
 	    	}
 	   
 	    }
+	public void addperposition(int index, Funcionarios f) {
+		func.add(index, f);
+	}
 	 public Funcionarios procurarPosicao(int p) {
-
-		
-
+		if(!verificaPosicao(p)) {
+			throw new IllegalArgumentException("posição inavlida");
+		}
 			return func.get(p);
 		}
+	 
+	 
 		private boolean verificaPosicao(int posicao) {
-			return posicao >= 0 && posicao <= this.total;
+			return posicao >= 0 && posicao <= func.size();
 		}
 		public void remover(int index) {
 			func.remove(index);
@@ -54,6 +59,8 @@ public class Metodos3 {
 		            System.out.println("------------");
 		        }
 		    }
-	}
+		
+	
+}
 
 

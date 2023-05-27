@@ -7,7 +7,7 @@ public class Q3 {
 public static void main(String[] args) {
 	ArrayList <Integer> vetor = new ArrayList<>();
 	Scanner in = new Scanner(System.in);
-	System.out.println("insira numeros de 2 a 7: ");
+	System.out.println("insira numeros de 2 a 7, se o numero digita for invalido o array será encerrado: ");
 	for(int i = 0; i<5; i++) {
 		int numero;
 		numero = in.nextInt();

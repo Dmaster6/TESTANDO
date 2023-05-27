@@ -1,0 +1,32 @@
+package listaencadeada;
+
+public class Celula {
+	private Celula proxima;
+	private Object elemento;
+	public Celula(Celula proxima, Object elemento) {
+		super();
+		this.proxima = proxima;
+		this.elemento = elemento;
+	}
+	public Celula() {
+		super();
+	}
+	public Celula(Object elemento) {
+		super();
+		this.elemento = elemento;
+	}
+	public Celula getProxima() {
+		return proxima;
+	}
+	public void setProxima(Celula proxima) {
+		this.proxima = proxima;
+	}
+	public Object getElemento() {
+		return elemento;
+	}
+	public void setElemento(Object elemento) {
+		this.elemento = elemento;
+	}
+	
+	
+}

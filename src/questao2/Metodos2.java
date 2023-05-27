@@ -11,6 +11,22 @@ public class Metodos2 {
 	int total = 0;
 	
 	
+	public void addElement(int index, Funcionarios element) {
+		aumentaVetor(); 
+		Funcionarios[] newArray = new Funcionarios[this.f.length + 1];
+	    
+	    for (int i = 0; i < index; i++) {
+	        newArray[i] = this.f[i];
+	    }
+	    
+	    newArray[index] = element;
+	    
+	    for (int i = index + 1; i < newArray.length; i++) {
+	        newArray[i] = this.f[i - 1];
+	    }
+	    
+	    this.f = newArray;
+	}
 	public void removeElement( int removedIdx) {
 		Funcionarios[] novoArray = new Funcionarios[this.f.length - 1];
 		
@@ -85,4 +101,5 @@ private void aumentaVetor() {
 	}
 	return null;
 }
+    
 }

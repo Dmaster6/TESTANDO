@@ -13,6 +13,8 @@ public static void main(String[] args) {
 	System.out.println(salarioTotal );
 	if(salarioTotal < 50) {
 		System.out.println("va trabalhar ");
+	} else {
+		System.out.println("continue assim, ESCRAVO!!!!!");
 	} 
 	
 }

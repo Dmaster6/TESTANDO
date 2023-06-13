@@ -33,8 +33,8 @@ class codigo4{
 		  
 		}  
 		  
-		JOptionPane.showMessageDialog(null, "Soma dos �mpares �: "+impar);  
-		JOptionPane.showMessageDialog(null, "Multiplica��o dos pares �: "+par); 
+		JOptionPane.showMessageDialog(null, "Soma dos impares é: "+impar);  
+		JOptionPane.showMessageDialog(null, "Multiplicação dos pares é: "+par); 
 	}
 	}
 	

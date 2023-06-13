@@ -21,6 +21,60 @@ public class Lista {
 		total++;
 	}
 	
+	public void adiciona(Object elemento) {
+		if (this.total == 0) {
+			adcionarNoComeco(elemento);
+		} else {
+			Celula nova = new Celula(elemento);
+			this.ultima.setProxima(nova);
+			this.ultima = nova;
+			this.total++;
+
+		}
+
+	}
+
+	public void removerInicio() {
+		
+		Celula remove = this.primeira;
+		this.primeira = this.primeira.getProxima();
+		remove.setProxima(null);
+		this.total--;
+	}
+	
+	public void removerFinal() {
+		
+		Celula anterior = this.primeira;
+		
+		for(int cont=0;cont<this.total-2;cont++) {
+			anterior = anterior.getProxima();
+		}
+			
+		anterior.setProxima(null);
+		this.ultima = anterior;
+		
+		this.total--;
+		
+	}
+	
+	public void removerPorPosicao(int posicao) {
+		
+		if(posicao == 0) {
+			removerInicio();
+		} else {
+		
+		Celula anterior = this.primeira;
+		
+		for(int cont=0; cont<posicao-1;cont++) {
+			anterior = anterior.getProxima();
+		}
+
+		anterior.setProxima(anterior.getProxima().getProxima());
+		
+		this.total--;
+	}
+}
+	
 	public void adicionarPerPosition(int index, Object elemento) {
 		if(index < 0 || index > this.total) {
 			throw new IllegalArgumentException("posição invalida!!!");
@@ -56,16 +110,16 @@ public class Lista {
 	  total++;
 	
 	}
-	    public void printList()
-	    {
-	        Celula tnode = this.primeira;
-	        while (tnode != null)
-	        {
-	            System.out.print(tnode.getElemento() +" ");
-	            tnode = tnode.getProxima();
-	        }
-	        return;
-	    }
-	        
-	    }
+	public void listar() {
+		if(total == 0) {
+			System.out.println("[]");
+		}
+		Celula aux = this.primeira;
+		for (int cont = 0; cont < this.total - 1; cont++) {
+			System.out.print(aux.getElemento() + " ");
+			aux = aux.getProxima();
+		}
+		System.out.println(aux.getElemento());
 
+	}
+}
